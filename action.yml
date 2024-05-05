@@ -1,0 +1,26 @@
+name: 'Set kubernetes context'
+description: 'Set kubernetes context using service account OR Github OIDC authentication'
+inputs:
+   method:
+      description: 'Acceptable values: service-account or oidc'
+      required: true
+      default: 'oidc'
+   k8s-ca-file:
+      description: 'CA file'
+      required: false
+   k8s-ca:
+      description: 'CA content'
+      required: false
+   k8s-url:
+      description: 'Cluster URL'
+      required: true
+   k8s-secret:
+      description: 'Service account secret (run kubectl get secrets -o yaml and copy the secret)'
+      required: false
+   audience:
+      description: 'Audience'
+      required: false
+      default: 'actions'
+runs:
+  using: node20
+  main: dist/index.js
