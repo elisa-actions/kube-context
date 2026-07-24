@@ -16,7 +16,7 @@
     "@actions/core": "^1.11.1",
     "@actions/github": "^6.0.0",
     "@kubernetes/client-node": "^1.0.0",
-    "js-yaml": "^4.2.0"
+    "js-yaml": "^4.3.0"
   },
   "devDependencies": {
     "@types/jest": "^29.5.12",
